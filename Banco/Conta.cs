@@ -7,11 +7,11 @@ using System.Windows.Forms;
 
 namespace Banco
 {
-    class Conta
+    public class Conta
     {
         const double LimiteSaqueMenorDeIdade = 200;
 
-        public Double Saldo { get; set; }
+        public double Saldo { get; private set; }
         public Cliente Titular { get; set; }
         //public String Titular { get; set; }
         public int Numero { get; set; }
