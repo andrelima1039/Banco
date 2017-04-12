@@ -20,18 +20,15 @@ namespace Banco
         private void button1_Click(object sender, EventArgs e)
         {
             Conta contaAndre = new Conta();
-            contaAndre.Titular = "André";
             contaAndre.Numero = 1;
-            contaAndre.Deposita(100);
-            if (contaAndre.Saca(500))
-            {
-                MessageBox.Show("Saque bem sucedido");
-            }
-            else
-            {
-                MessageBox.Show("Saldo Insuficiente");
-            }
-            MessageBox.Show("Saldo: "+contaAndre.Saldo);
+
+            Cliente Titular = new Cliente();
+            contaAndre.Titular = Titular;
+            contaAndre.Titular.Nome = "André";
+            contaAndre.Titular.Idade = 17;
+
+            contaAndre.Deposita(500);
+            contaAndre.Saca(300);
         }
     }
 }
