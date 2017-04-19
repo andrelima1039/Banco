@@ -8,6 +8,8 @@ namespace Banco
 {
     class ContaPoupanca : Conta
     {
+        public ContaPoupanca(int numero) : base(numero) { }
+
         public override bool Saca(double valor)
         {
             return base.Saca(valor + 0.10);

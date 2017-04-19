@@ -51,9 +51,9 @@ namespace Banco
         {
             Conta c1 = new Conta();
             c1.Deposita(534);
-            ContaPoupanca c2 = new ContaPoupanca();
+            ContaPoupanca c2 = new ContaPoupanca(1);
             c2.Deposita(200);
-            ContaPoupanca c3 = new ContaPoupanca();
+            ContaPoupanca c3 = new ContaPoupanca(2);
             c3.Deposita(300);
 
             TotalizadorDeContas t = new TotalizadorDeContas();
