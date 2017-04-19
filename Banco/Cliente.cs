@@ -13,14 +13,24 @@ namespace Banco
         public int Idade { get; set; }
         public string CPF { get; set; }
         public string RG { get; set; }
+        public string Documentos { get; set; }
 
-        public bool EhMaiorDeIdade(int idade)
+        public Cliente(string nome)
         {
-            if(this.Idade > 18)
-            {
-                return true;
-            }
-            return false;
+            this.Nome = nome;
         }
+
+        public bool PodeAbrirContaSozinho
+        {
+            get
+            {
+                bool maiorDeIdade = this.Idade >= 18;
+                bool emancipado = this.Documentos.Contains("emancipacao");
+                bool possuiCPF = !string.IsNullOrEmpty(this.CPF);
+                return (maiorDeIdade || emancipado) && possuiCPF;
+            }
+        }
+
+        
     }
 }

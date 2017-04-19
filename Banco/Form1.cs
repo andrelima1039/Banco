@@ -17,18 +17,32 @@ namespace Banco
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        Conta conta = new Conta();
+        Cliente cliente = new Cliente("Renata");
+
+
+
+        private void Form1_Load(object sender, EventArgs e)
         {
-            Conta contaAndre = new Conta();
-            contaAndre.Numero = 1;
+            conta.Titular = cliente;
+            conta.Numero = 1;
+            conta.Deposita(500);
 
-            Cliente Titular = new Cliente();
-            contaAndre.Titular = Titular;
-            contaAndre.Titular.Nome = "André";
-            contaAndre.Titular.Idade = 17;
+            textoTitular.Text = conta.Titular.Nome;
+            textoNumero.Text = Convert.ToString(conta.Numero);
+            textoSaldo.Text = Convert.ToString(conta.Saldo);
+        }
 
-            contaAndre.Deposita(500);
-            contaAndre.Saca(300);
+        private void Sacar_Click(object sender, EventArgs e)
+        {
+            conta.Saca(Double.Parse(textoValor.Text));
+            textoSaldo.Text = Convert.ToString(conta.Saldo);
+        }
+
+        private void depositar_Click(object sender, EventArgs e)
+        {
+            conta.Deposita(Double.Parse(textoValor.Text));
+            textoSaldo.Text = Convert.ToString(conta.Saldo);
         }
     }
 }

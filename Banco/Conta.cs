@@ -13,7 +13,6 @@ namespace Banco
 
         public double Saldo { get; private set; }
         public Cliente Titular { get; set; }
-        //public String Titular { get; set; }
         public int Numero { get; set; }
 
         public void Deposita(double valor)
@@ -27,7 +26,7 @@ namespace Banco
             {
                 if (valor > LimiteSaqueMenorDeIdade)
                 {
-                    if (Titular.EhMaiorDeIdade(Titular.Idade))
+                    if (Titular.PodeAbrirContaSozinho)
                     {
                         this.Saldo -= valor;
                         MessageBox.Show("Saque realizado com sucesso");
