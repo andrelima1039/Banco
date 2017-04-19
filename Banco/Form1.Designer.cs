@@ -38,11 +38,12 @@
             this.label4 = new System.Windows.Forms.Label();
             this.textoSaldo = new System.Windows.Forms.TextBox();
             this.depositar = new System.Windows.Forms.Button();
+            this.TotalSaldoContas = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // Sacar
             // 
-            this.Sacar.Location = new System.Drawing.Point(34, 204);
+            this.Sacar.Location = new System.Drawing.Point(10, 197);
             this.Sacar.Name = "Sacar";
             this.Sacar.Size = new System.Drawing.Size(75, 23);
             this.Sacar.TabIndex = 0;
@@ -116,7 +117,7 @@
             // 
             // depositar
             // 
-            this.depositar.Location = new System.Drawing.Point(115, 204);
+            this.depositar.Location = new System.Drawing.Point(91, 197);
             this.depositar.Name = "depositar";
             this.depositar.Size = new System.Drawing.Size(75, 23);
             this.depositar.TabIndex = 9;
@@ -124,11 +125,22 @@
             this.depositar.UseVisualStyleBackColor = true;
             this.depositar.Click += new System.EventHandler(this.depositar_Click);
             // 
+            // TotalSaldoContas
+            // 
+            this.TotalSaldoContas.Location = new System.Drawing.Point(172, 197);
+            this.TotalSaldoContas.Name = "TotalSaldoContas";
+            this.TotalSaldoContas.Size = new System.Drawing.Size(75, 23);
+            this.TotalSaldoContas.TabIndex = 10;
+            this.TotalSaldoContas.Text = "Total Saldo Contas";
+            this.TotalSaldoContas.UseVisualStyleBackColor = true;
+            this.TotalSaldoContas.Click += new System.EventHandler(this.TotalSaldoContas_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(267, 261);
+            this.ClientSize = new System.Drawing.Size(259, 261);
+            this.Controls.Add(this.TotalSaldoContas);
             this.Controls.Add(this.depositar);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.textoSaldo);
@@ -158,6 +170,7 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox textoSaldo;
         private System.Windows.Forms.Button depositar;
+        private System.Windows.Forms.Button TotalSaldoContas;
     }
 }
 
